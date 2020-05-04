@@ -2,7 +2,7 @@
 !(function($) {
   "use strict";
 
-  // Preloader
+  // preloader
   $(window).on('load', function() {
     if ($('#preloader').length) {
       $('#preloader').delay(100).fadeOut('slow', function() {
@@ -11,7 +11,7 @@
     }
   });
 
-  // Smooth scroll for the navigation menu and links with .scrollto classes
+  // smooth scroll for the navigation menu and links with .scrollto classes
   $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function(e) {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       e.preventDefault();
@@ -52,7 +52,7 @@
     }
   });
 
-  // Mobile Navigation
+  // mobile Navigation
   if ($('.nav-menu').length) {
     var $mobile_nav = $('.nav-menu').clone().prop({
       class: 'mobile-nav d-lg-none'
@@ -87,7 +87,7 @@
     $(".mobile-nav, .mobile-nav-toggle").hide();
   }
 
-  // Navigation active state on scroll
+  // navigation active state on scroll
   var nav_sections = $('section');
   var main_nav = $('.nav-menu, .mobile-nav');
 
@@ -110,7 +110,7 @@
     });
   });
 
-  // Toggle .header-scrolled class to #header when page is scrolled
+  // toggle .header-scrolled class to #header when page is scrolled
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('#header').addClass('header-scrolled');
@@ -123,7 +123,7 @@
     $('#header').addClass('header-scrolled');
   }
 
-  // Back to top button
+  // back to top button
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('.back-to-top').fadeIn('slow');
@@ -139,7 +139,7 @@
     return false;
   });
 
-  // Initiate the venobox plugin
+  // initiate the venobox plugin
   $(window).on('load', function() {
     $('.venobox').venobox();
   });
@@ -150,12 +150,12 @@
     time: 1000
   });
 
-  // Initiate venobox lightbox
+  // initiate venobox lightbox
   $(document).ready(function() {
     $('.venobox').venobox();
   });
 
-  // Testimonials carousel (uses the Owl Carousel library)
+  // testimonials carousel (uses the Owl Carousel library)
   $(".testimonials-carousel").owlCarousel({
     autoplay: true,
     dots: true,
@@ -163,7 +163,7 @@
     items: 1
   });
 
-  // Initi AOS
+  // initi AOS
   AOS.init({
     duration: 1000,
     easing: "ease-in-out",
